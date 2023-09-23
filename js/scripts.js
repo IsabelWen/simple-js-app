@@ -5,9 +5,9 @@ let pokemonList = [
 ];
 for (let i = 0; i < pokemonList.length; i++) {
     if (pokemonList[i].height >100){ //if pokemon's height is over 100cm also print 'Wow that's big
-    document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ' cm) - Wow, that\'s big!');
+    document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ' cm) - Wow, that\'s big!<br>');
     }else {
-    document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ' cm) ');
+    document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ' cm)<br>');
     }
 }
     
