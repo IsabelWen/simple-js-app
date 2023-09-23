@@ -1,7 +1,14 @@
+* {
+    box-sizing: border-box;
+}
 body {
     background-color: #000;
     color: #fff;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 16px;
+    line-height: 1.6;
+    min-height: 100vh;
+    text-align: center;
+    margin-top: 35px;
 }
