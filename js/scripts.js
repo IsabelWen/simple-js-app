@@ -28,7 +28,7 @@ pokemonRepository.getAll().forEach(function(pokemon) {
     let listpokemon = document.createElement('li');
     // creating button element inside the li
     let button = document.createElement('button');
-    button.innerText = 'placeholder';
+    button.innerText = pokemon.name;
     button.classList.add('button-class');
     // Append button to the li listpokemon as its child
     listpokemon.appendChild(button);
