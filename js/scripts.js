@@ -1,18 +1,18 @@
 // IIFE including the functions getAll and add
 let pokemonRepository = (function () {
-    let pokemonList = [
+    let repository = [
         {name: 'Psyduck', height: 79, types: ['Water'], abilities: ['Damp', 'Cloud Nine']},
         {name: 'Clefairy', height: 61, types: ['Fairy'], abilities: ['Cute Charm', 'Magic Guard']},
         {name: 'Slowpoke', height: 119, types: ['Water', 'Psychic'], abilities: ['Oblivious', 'Own Tempo']}
     ];
 
     function getAll() {
-        return pokemonList;
+        return repository;
     }
 
     function add(pokemon) {
         if (typeof pokemon === 'object'){
-        pokemonList.push(pokemon);
+        repository.push(pokemon);
         }
     }
 
