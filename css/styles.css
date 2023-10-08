@@ -29,4 +29,16 @@ li {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    border-radius: 3px;
 }
+
+/* Media queries */
+@media all and (max-width: 500px) {
+    h1 {
+      font-size: 25px;
+    }
+    .button-class {
+        padding: 10px 20px;
+    }
+  }
+  
