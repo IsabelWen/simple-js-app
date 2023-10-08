@@ -22,14 +22,23 @@ let pokemonRepository = (function () {
     };
 })();
 
-// Retrieve pokemonList array from IIFE
-let pokemonList = pokemonRepository.getAll();
+pokemonRepository.getAll().forEach(function(pokemon) {
+    let pokemonList = document.querySelector('.pokemon-list');
+    // creating li element inside the ul
+    let listpokemon = document.createElement('li');
+    // creating button element inside the li
+    let button = document.createElement('button');
+    button.innerText = 'placeholder';
+    button.classList.add('button-class');
+    // Append button to the li listpokemon as its child
+    listpokemon.appendChild(button);
+    // Append the li listpokemon to the ul pokemonList as its child
+    pokemonList.appendChild(listpokemon);
 
-pokemonList.forEach(function(pokemon) {
-    if (pokemon.height >100){ //if pokemon's height is over 100cm also print 'Wow that's big'
+    /*if (pokemon.height >100){ //if pokemon's height is over 100cm also print 'Wow that's big'
     document.write(pokemon.name + ' (height: ' + pokemon.height + ' cm) - Wow, that\'s big!<br>');
     }else {
     document.write(pokemon.name + ' (height: ' + pokemon.height + ' cm)<br>');
-    }
+    }*/
 }); 
     
