@@ -29,18 +29,20 @@ let pokemonRepository = (function () {
         // Append the li listpokemon to the ul pokemonList as its child
         pokemonList.appendChild(listpokemon);
         // Add event listener to button with the showDetails function
-        button.addEventListener('click', showDetails(pokemon));
+        button.addEventListener('click', function() {
+            showDetails(pokemon.name);
+        });
     }
 
     function showDetails(pokemon){
-        console.log(pokemon);
+        console.log(pokemon) ;
     }
 
     return {
         getAll: getAll,
         add: add,
-        addListItem: addListItem,
-        showDetails: showDetails
+        showDetails: showDetails,
+        addListItem: addListItem
     };
 })();
 
