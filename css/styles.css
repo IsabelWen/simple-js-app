@@ -15,9 +15,12 @@ body {
 h1 {
     font-size: 30px;
     font-weight: 700;
+
   }
-li {
+ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 .button-class {
     background-color: #FBCA3C;
@@ -27,9 +30,11 @@ li {
     text-align: center;
     text-decoration: none;
     font-size: 16px;
+    font-weight: 700;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 3px;
+    min-width: 300px;
 }
 
 /* Media queries */
@@ -39,6 +44,7 @@ li {
     }
     .button-class {
         padding: 10px 20px;
+        min-width: 80%;
     }
   }
   
