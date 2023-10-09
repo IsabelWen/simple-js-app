@@ -30,10 +30,15 @@ let pokemonRepository = (function () {
         pokemonList.appendChild(listpokemon);
     }
 
+    function showDetails(pokemon){
+        console.log(pokemon);
+    }
+
     return {
         getAll: getAll,
         add: add,
-        addListItem: addListItem
+        addListItem: addListItem,
+        showDetails: showDetails
     };
 })();
 
