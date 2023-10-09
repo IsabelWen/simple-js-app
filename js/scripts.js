@@ -48,11 +48,5 @@ let pokemonRepository = (function () {
 
 pokemonRepository.getAll().forEach(function(pokemon) {
     pokemonRepository.addListItem(pokemon);
-
-    /*if (pokemon.height >100){ //if pokemon's height is over 100cm also print 'Wow that's big'
-    document.write(pokemon.name + ' (height: ' + pokemon.height + ' cm) - Wow, that\'s big!<br>');
-    }else {
-    document.write(pokemon.name + ' (height: ' + pokemon.height + ' cm)<br>');
-    }*/
 }); 
     
