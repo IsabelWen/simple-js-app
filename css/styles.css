@@ -22,6 +22,8 @@ ul {
     margin: 0;
     padding: 0;
 }
+
+/* button-class styling */
 .button-class {
     background-color: #FBCA3C;
     border: none;
@@ -31,11 +33,28 @@ ul {
     text-decoration: none;
     font-size: 16px;
     font-weight: 700;
-    margin: 4px 2px;
-    cursor: pointer;
+    margin: 4px 4px;
     border-radius: 3px;
     min-width: 300px;
+
+    /* transition */
+    transition: transform 0.3s;
+    transition-timing-function: ease-in-out;
 }
+.button-class:hover,
+.button-class:focus {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.button-class:active,
+.button-class:active {
+  background-color: #fff;
+  border: 5px solid #FBCA3C;
+  color: #000;
+}
+
+
 
 /* Media queries */
 @media all and (max-width: 500px) {
