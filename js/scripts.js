@@ -28,6 +28,8 @@ let pokemonRepository = (function () {
         listpokemon.appendChild(button);
         // Append the li listpokemon to the ul pokemonList as its child
         pokemonList.appendChild(listpokemon);
+        // Add event listener to button with the showDetails function
+        button.addEventListener('click', showDetails(pokemon));
     }
 
     function showDetails(pokemon){
