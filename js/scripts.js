@@ -11,7 +11,7 @@ let pokemonRepository = (function () {
 
     function add(pokemon) {
         if (typeof pokemon === 'object'){
-        repository.push(pokemon);
+        pokemonList.push(pokemon);
         }
     }
 
@@ -28,8 +28,8 @@ let pokemonRepository = (function () {
         // Append the li listpokemon to the ul pokemonList as its child
         pokemonList.appendChild(listpokemon);
         // Add event listener to button with the showDetails function
-        button.addEventListener('click', function() {
-            showDetails(pokemon.name);
+        button.addEventListener('click', function(event) {
+            showDetails(pokemon);
         });
     }
 
@@ -63,19 +63,19 @@ let pokemonRepository = (function () {
         });
     }
 
-    function showDetails(pokemon){
-        loadDetails(pokemon).then(function () {
-            console.log(pokemon);
+    function showDetails(item){
+        pokemonRepository.loadDetails(item).then(function () {
+            console.log(item);
         });
     }
 
     return {
         getAll: getAll,
         add: add,
+        addListItem: addListItem,
         loadList: loadList,
         loadDetails: loadDetails,
-        showDetails: showDetails,
-        addListItem: addListItem
+        showDetails: showDetails
     };
 })();
 
