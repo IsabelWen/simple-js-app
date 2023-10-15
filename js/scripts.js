@@ -1,10 +1,25 @@
 // IIFE including the functions getAll and add
 let pokemonRepository = (function () {
-    let repository = [
-        {name: 'Psyduck', height: 79, types: ['Water'], abilities: ['Damp', 'Cloud Nine']},
-        {name: 'Clefairy', height: 61, types: ['Fairy'], abilities: ['Cute Charm', 'Magic Guard']},
-        {name: 'Slowpoke', height: 119, types: ['Water', 'Psychic'], abilities: ['Oblivious', 'Own Tempo']}
-    ];
+    let pokemonList = [];
+    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+
+    // Other functions
+
+    function loadList() {
+        return fetch(apiUrl).then(function (resposne) {
+            return Response.json();
+        }).then(function (json) {
+            json.results.forEach(function (item) {
+                let pokemon = {
+                    name: item.name,
+                    detailsUrl: item.url
+                };
+                add(pokemon);
+            });
+        }).catch(function (e) {
+            console.error(e);
+        })
+    }
 
     function getAll() {
         return repository;
@@ -41,12 +56,15 @@ let pokemonRepository = (function () {
     return {
         getAll: getAll,
         add: add,
-        showDetails: showDetails,
-        addListItem: addListItem
+        loadList: loadList
     };
 })();
 
-pokemonRepository.getAll().forEach(function(pokemon) {
-    pokemonRepository.addListItem(pokemon);
-}); 
+pokemonRepository.loadList().then(function() {
+    // Now the data is loaded
+    pokemonRepository.getAll().forEach(function(pokemon) {
+        pokemonRepository.addListItem(pokemon);
+    }); 
+})
+
     
