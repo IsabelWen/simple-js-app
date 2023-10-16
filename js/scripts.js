@@ -71,7 +71,7 @@ let pokemonRepository = (function () {
     }
 
     // Create modal
-    function showModal(pokemon) {
+    function showModal(item) {
         let modalContainer = document.querySelector('#modal-container');
     
         //Clear all existing modal content
@@ -89,18 +89,17 @@ let pokemonRepository = (function () {
         modal.appendChild(closeButtonElement);
         
         let titleElement = document.createElement('h1');
-        titleElement.innerText = pokemon.name;
+        titleElement.innerText = item.name;
 
         let heightElement = document.createElement('p');
-        heightElement.innerText = 'height: ' + pokemon.height;
+        heightElement.innerText = 'height: ' + item.height;
 
-        // functioniert nicht!!!
+        // type 2 anzeige möglich machen
         let typeElement = document.createElement('p');
-        typeElement.innerText = 'type: ' + JSON.stringify(pokemon.types);
+        typeElement.innerText = 'type: ' + item.types[0].type['name'];
 
-        // functioniert nicht!!!
         let imgElement = document.createElement('img');
-        imgElement.src = 'iten.imageUrl';
+        imgElement.src = item.imageUrl;
 
         modalContainer.appendChild(modal);
         modal.appendChild(titleElement);
