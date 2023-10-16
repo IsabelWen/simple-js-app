@@ -104,7 +104,12 @@ let pokemonRepository = (function () {
             hideModal();
           }
         });
-      }    
+    }
+
+    function hideModal() {
+        let modalContainer = document.querySelector('#modal-container');
+        modalContainer.classList.remove('is-visible');
+    }
 
     return {
         getAll: getAll,
