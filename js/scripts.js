@@ -95,8 +95,10 @@ let pokemonRepository = (function () {
         heightElement.innerText = 'height: ' + item.height;
 
         // type 2 anzeige möglich machen
+        let type1 = item.types[0].type['name'];
+
         let typeElement = document.createElement('p');
-        typeElement.innerText = 'type: ' + item.types[0].type['name'];
+        typeElement.innerText = 'type: ' + type1;
 
         let imgElement = document.createElement('img');
         imgElement.src = item.imageUrl;
