@@ -30,6 +30,7 @@ let pokemonRepository = (function () {
         // Add event listener to button with the showDetails function
         button.addEventListener('click', function(event) {
             showDetails(pokemon);
+            showModal();
         });
     }
 
