@@ -30,7 +30,6 @@ let pokemonRepository = (function () {
         // Add event listener to button with the showDetails function
         button.addEventListener('click', function(event) {
             showDetails(pokemon);
-            showModal();
         });
     }
 
@@ -67,11 +66,12 @@ let pokemonRepository = (function () {
     function showDetails(item){
         pokemonRepository.loadDetails(item).then(function () {
             console.log(item);
+            showModal(item);
         });
     }
 
     // Create modal
-    function showModal(title, text) {
+    function showModal(pokemon) {
         let modalContainer = document.querySelector('#modal-container');
     
         //Clear all existing modal content
@@ -86,17 +86,17 @@ let pokemonRepository = (function () {
         closeButtonElement.innerText = 'Close';
         closeButtonElement.addEventListener('click', hideModal);
     
-        let titleElement = document.createElement('h1');
-        titleElement.innerText = title;
-    
-        let contentElement = document.createElement('p');
-        contentElement.innerText = text;
-    
         modal.appendChild(closeButtonElement);
+        
+        let titleElement = document.createElement('h1');
+        titleElement.innerText = 'Title';
+
+        let contentElement = document.createElement('p');
+        contentElement.innerText = 'Text';
+
+        modalContainer.appendChild(modal);
         modal.appendChild(titleElement);
         modal.appendChild(contentElement);
-        modalContainer.appendChild(modal);
-    
         modalContainer.classList.add('is-visible');
     
         modalContainer.addEventListener('click', (e) => {
