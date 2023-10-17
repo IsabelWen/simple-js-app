@@ -94,11 +94,17 @@ let pokemonRepository = (function () {
         let heightElement = document.createElement('p');
         heightElement.innerText = 'height: ' + item.height;
 
-        // type 2 anzeige möglich machen
-        let type1 = item.types[0].type['name'];
+        // how many types does the pokemon have
+        function typeCount(item) {
+            if(item.types.length === 2) {
+                return item.types[0].type.name + ', ' + item.types[1].type.name;
+            } else {
+                return item.types[0].type.name;
+            }
+        }
 
         let typeElement = document.createElement('p');
-        typeElement.innerText = 'type: ' + type1;
+        typeElement.innerText = 'type: ' + typeCount(item);
 
         let imgElement = document.createElement('img');
         imgElement.src = item.imageUrl;
