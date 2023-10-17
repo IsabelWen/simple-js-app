@@ -119,7 +119,8 @@ ul {
         min-width: 80%;
     }
     .modal img {
-        width: 150px;
+        width: 100px;
+        margin-right: 10px;
     }
   }
   
