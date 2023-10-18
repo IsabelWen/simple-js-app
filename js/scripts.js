@@ -22,6 +22,7 @@ let pokemonRepository = (function () {
         listpokemon.classList.add('list-group-item'); // bootstrap class
         // creating button element inside the li
         let button = document.createElement('button');
+        button.classList.add('btn'); // bootstrap class
         button.innerText = pokemon.name;
         button.classList.add('button-class');
         // Append button to the li listpokemon as its child
