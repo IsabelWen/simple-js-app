@@ -90,6 +90,7 @@ let pokemonRepository = (function () {
         let imageElement = document.createElement('img');
         imageElement.classList.add('modal-img');
         imageElement.setAttribute('src', item.imageUrl);
+        imageElement.classList.add('float-right');
         //creating element for height in modal content
         let heightElement = document.createElement('p');
         heightElement.innerText = 'height: ' + item.height;
