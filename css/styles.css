@@ -13,12 +13,6 @@ body {
     margin-top: 35px;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
 /* button-class styling */
 .button-class {
     background-color: #FBCA3C;
