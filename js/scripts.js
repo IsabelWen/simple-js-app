@@ -23,6 +23,7 @@ let pokemonRepository = (function () {
         // creating button element inside the li
         let button = document.createElement('button');
         button.classList.add('btn'); // bootstrap class
+        button.classList.add('btn-block');
         button.setAttribute('data-toggle', 'modal'); // bootstrap attr
         button.setAttribute('data-target', '#modal'); // bootstrap attr
         button.innerText = pokemon.name;
