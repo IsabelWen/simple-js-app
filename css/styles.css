@@ -12,6 +12,12 @@ body {
     text-align: center;
     margin-top: 35px;
 }
+.navbar {
+    background-color: #3466AF;
+}
+.container{
+    margin-top: 4rem;
+}
 .list-group-item {
     background-color: #000;
 }
