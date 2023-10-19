@@ -12,7 +12,9 @@ body {
     text-align: center;
     margin-top: 35px;
 }
-
+.list-group-item {
+    background-color: #000;
+}
 /* button-class styling */
 .button-class {
     background-color: #FBCA3C;
@@ -38,6 +40,16 @@ body {
 }
 
 /* Modal styling */
+.modal {
+    color: #000;
+}
+.modal-dialog {
+    margin-top: 15%;
+}
+.modal-img {
+    padding: 20px;
+    margin-bottom: 20px;
+}
 
 
 /* Media queries */
