@@ -130,3 +130,6 @@ pokemonRepository.loadList().then(function() {
         pokemonRepository.addListItem(pokemon);
     }); 
 })
+/* eslint no-console: "error" */
+
+console.log("Log a debug level message.");
