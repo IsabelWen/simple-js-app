@@ -111,7 +111,7 @@ let pokemonRepository = (function () {
         modalBody.appendChild(imageElement);
         modalBody.appendChild(heightElement);
         modalBody.appendChild(typeElement);
-    }
+    }    
 
     return {
         getAll: getAll,
@@ -120,7 +120,7 @@ let pokemonRepository = (function () {
         loadList: loadList,
         loadDetails: loadDetails,
         showDetails: showDetails,
-        showModal: showModal
+        showModal: showModal,
     };
 })();
 
@@ -130,6 +130,28 @@ pokemonRepository.loadList().then(function() {
         pokemonRepository.addListItem(pokemon);
     }); 
 })
+
+// live search function
+function searchFunction() {
+    // Declare variables
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('searchInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementsByClassName('list-group');
+    li = document.getElementsByClassName('list-group-item');
+  
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+      buttonPokemon = li[i].getElementsByClassName('button-class')[0];
+      txtValue = buttonPokemon.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+    console.log(input.value);
+}
 /* eslint no-console: "error" */
 
 console.log("Log a debug level message.");
