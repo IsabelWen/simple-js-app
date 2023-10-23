@@ -33,7 +33,7 @@ let pokemonRepository = (function () {
         // Append the li listpokemon to the ul pokemonList as its child
         pokemonList.appendChild(listpokemon);
         // Add event listener to button with the showDetails function
-        button.addEventListener('click', function(event) {
+        button.addEventListener('click', function() {
             showDetails(pokemon);
         });
     }
@@ -78,7 +78,6 @@ let pokemonRepository = (function () {
     function showModal(item) {
         let modalBody = document.querySelector('.modal-body');
         let modalTitle = document.querySelector('.modal-title');
-        let modalHeader = document.querySelector('.modal-header');
     
         //Clear all existing modal content
         modalTitle.innerHTML = '';
@@ -134,10 +133,9 @@ pokemonRepository.loadList().then(function() {
 // live search function
 function searchFunction() {
     // Declare variables
-    var input, filter, ul, li, a, i, txtValue;
+    var input, filter, li, i, txtValue, buttonPokemon;
     input = document.getElementById('searchInput');
     filter = input.value.toUpperCase();
-    ul = document.getElementsByClassName('list-group');
     li = document.getElementsByClassName('list-group-item');
   
     // Loop through all list items, and hide those who don't match the search query
@@ -145,13 +143,9 @@ function searchFunction() {
       buttonPokemon = li[i].getElementsByClassName('button-class')[0];
       txtValue = buttonPokemon.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        li[i].style.display = "";
+        li[i].style.display = '';
       } else {
-        li[i].style.display = "none";
+        li[i].style.display = 'none';
       }
     }
-    console.log(input.value);
 }
-/* eslint no-console: "error" */
-
-console.log("Log a debug level message.");
