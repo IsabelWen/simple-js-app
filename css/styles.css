@@ -64,10 +64,10 @@ h1 {
 
 
 /* Media queries */
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
     .button-class {
-        padding: 12px 20px;
-        min-width: 80%;
+        padding-top: 26px;
+        padding-bottom: 26px;
     }
   }
   
