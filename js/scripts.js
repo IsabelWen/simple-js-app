@@ -16,10 +16,11 @@ let pokemonRepository = (function () {
     }
 
     function addListItem(pokemon){
-        let pokemonList = document.querySelector('.list-group');
+        let pokemonList = document.querySelector('.row');
         // creating li element inside the ul
         let listpokemon = document.createElement('li');
         listpokemon.classList.add('list-group-item'); // bootstrap class
+        listpokemon.classList.add('col-2'); // bootstrap class
         // creating button element inside the li
         let button = document.createElement('button');
         button.classList.add('btn'); // bootstrap class
