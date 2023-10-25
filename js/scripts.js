@@ -20,7 +20,8 @@ let pokemonRepository = (function () {
         // creating li element inside the ul
         let listpokemon = document.createElement('li');
         listpokemon.classList.add('list-group-item'); // bootstrap class
-        listpokemon.classList.add('col-2'); // bootstrap class
+        listpokemon.classList.add('col-12'); // bootstrap class
+        listpokemon.classList.add('col-md-3'); // bootstrap class
         // creating button element inside the li
         let button = document.createElement('button');
         button.classList.add('btn'); // bootstrap class
