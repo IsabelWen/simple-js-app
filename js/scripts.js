@@ -130,11 +130,21 @@ pokemonRepository.loadList().then(function() {
     }); 
 })
 
+// Create input search bar
+let form = document.querySelector('.form-inline');
+let input = document.createElement('input');
+input.classList.add('form-control');
+input.classList.add('mr-2');
+input.classList.add('my-1');
+input.setAttribute('type', 'text');
+input.setAttribute('placeholder', 'Search');
+input.setAttribute('aria-label', 'Search');
+form.appendChild(input);
+
 // live search function
 function searchFunction() {
     // Declare variables
-    var input, filter, li, i, txtValue, buttonPokemon;
-    input = document.getElementById('searchInput');
+    var filter, li, i, txtValue, buttonPokemon;
     filter = input.value.toUpperCase();
     li = document.getElementsByClassName('list-group-item');
   
@@ -149,3 +159,5 @@ function searchFunction() {
       }
     }
 }
+
+input.addEventListener('keyup', searchFunction);
