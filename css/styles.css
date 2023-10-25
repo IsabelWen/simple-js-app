@@ -16,7 +16,10 @@ body {
     background-color: #3466AF;
 }
 .container{
-    margin-top: 4rem;
+    margin-top: 5rem;
+}
+h1 {
+    margin-bottom: 2rem;
 }
 .list-group-item {
     background-color: #000;
