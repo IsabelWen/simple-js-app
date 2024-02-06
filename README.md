@@ -8,3 +8,11 @@ Bootstrap, jQuery
 
 ## The API the project uses
 https://pokeapi.co/
+
+## Link to app
+Hosted on GitHub: https://isabelwen.github.io/simple-js-app/
+
+## Set up this App
+* Clone this repository.
+* Navigate to the simple-js-app folder and run `npm install`
+* Open index.html inside your web browser.
